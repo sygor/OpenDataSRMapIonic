@@ -1,4 +1,19 @@
 angular.module('starter.controllers', [])
+    .config(function($stateProvider, $urlRouterProvider) {
+      $urlRouterProvider.otherwise('/');
+
+      $stateProvider
+      .state('map', {
+        url:'/',
+        templateUrl: 'templates/map.html'
+      })
+      .state('list', {
+        url:'/list',
+        templateUrl: 'templates/list.html'
+      })
+
+    })
+
 
 .controller('MapCtrl', function($scope, $ionicLoading, $http) {
   $scope.mapCreated = function(map) {
