@@ -101,7 +101,9 @@ angular.module('starter.controllers', [])
   function addMarker(map, location, markers) {
     var marker = new google.maps.Marker({
       position: location,
-      map: map
+      map: map,
+      title: 'Testing Testing',
+      draggable: true
     });
     markers.push(marker);
   
